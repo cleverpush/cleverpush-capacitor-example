@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "5037423280",
+    "project_id": "cleverpush-capacitor",
+    "storage_bucket": "cleverpush-capacitor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5037423280:android:094c00688196072d469975",
+        "android_client_info": {
+          "package_name": "com.capacitorjs.app.testapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5037423280-omnjg5d5dslddo54olnn1jrj8sgajk17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2to9nDjxwjR72XM1a5RX0EVNMYzlcy2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5037423280-omnjg5d5dslddo54olnn1jrj8sgajk17.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5037423280:android:cd2169fe9664dbe6469975",
+        "android_client_info": {
+          "package_name": "com.capacitorjs.app.testapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5037423280-omnjg5d5dslddo54olnn1jrj8sgajk17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2to9nDjxwjR72XM1a5RX0EVNMYzlcy2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5037423280-omnjg5d5dslddo54olnn1jrj8sgajk17.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
