@@ -76,7 +76,7 @@ const Home: React.FC = () => {
           shape='round'
           onClick={() => {
             CleverPush.init({
-              channelId: 'RHe2nXvQk9SZgdC4x',
+              channelId: 'YOUR_CHANNEL_ID_HERE',
               autoRegister: false,
             })
           }}
@@ -97,6 +97,63 @@ const Home: React.FC = () => {
         >
           Throw Alert
         </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.trackPageView({ url: "" })}
+        >
+          Track PageView
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.addSubscriptionTag({ tagId:""})}    
+        >
+          Add SubscriptionTag
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.removeSubscriptionTag({ tagId: "" })}
+        >
+          Remove SubscriptionTag
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.hasSubscriptionTag({tagId:""})}
+        >
+          Has SubscriptionTag
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.getSubscriptionTags()}
+        >
+          Get SubscriptionTags
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.setSubscriptionTopics({topics:["",""]})}
+        >
+          Set SubscriptionTopics
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.getSubscriptionTopics()}
+        >
+          Get SubscriptionTopics
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.getAvailableTopics()}
+        >
+          Get AvailableTopics
+        </IonButton>
+    
 
       </IonContent>
     </IonPage>
