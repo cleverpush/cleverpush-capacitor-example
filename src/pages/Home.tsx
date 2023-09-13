@@ -51,11 +51,33 @@ const Home: React.FC = () => {
           This app was created to test and develop Capacitor core and plugins.
           To test plugins, open the side menu and navigate to the plugin's page!
         </p>
+
+        <IonButton
+          shape='round'
+          onClick={() => {
+            CleverPush.init({
+              channelId: 'RHe2nXvQk9SZgdC4x',
+              autoRegister: false,
+            })
+            //CleverPush.setShowNotificationsInForeground({showNotifications:true})
+            
+          }}
+        >
+          Init CP
+        </IonButton>
+
         <IonButton
           shape='round'
           onClick={() => CleverPush.subscribe()}
         >
           Subscribe
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.unsubscribe()}
+        >
+          Unsubscribe
         </IonButton>
 
         <IonButton
@@ -74,54 +96,36 @@ const Home: React.FC = () => {
 
         <IonButton
           shape='round'
-          onClick={() => {
-            CleverPush.init({
-              channelId: 'YOUR_CHANNEL_ID_HERE',
-              autoRegister: false,
-            })
-          }}
-        >
-          Init CP
-        </IonButton>
-
-        <IonButton
-          shape='round'
           onClick={() => CleverPush.showTopicsDialog()}
         >
           Show Topic Dialog
         </IonButton>
 
-        <IonButton
-          shape='round'
-          onClick={() => window.alert('Test')}
-        >
-          Throw Alert
-        </IonButton>
 
         <IonButton
           shape='round'
-          onClick={() => CleverPush.trackPageView({ url: "" })}
+          onClick={() => CleverPush.trackPageView({ url: "TRACK_PAGE_VIEW_URL_STRING" })}
         >
           Track PageView
         </IonButton>
 
         <IonButton
           shape='round'
-          onClick={() => CleverPush.addSubscriptionTag({ tagId:""})}    
+          onClick={() => CleverPush.addSubscriptionTag({ tagId:"Add_Subscription_Tag_STRING"})}    
         >
           Add SubscriptionTag
         </IonButton>
 
         <IonButton
           shape='round'
-          onClick={() => CleverPush.removeSubscriptionTag({ tagId: "" })}
+          onClick={() => CleverPush.removeSubscriptionTag({ tagId: "REMOVE_Subscription_Tag_STRING" })}
         >
           Remove SubscriptionTag
         </IonButton>
 
         <IonButton
           shape='round'
-          onClick={() => CleverPush.hasSubscriptionTag({tagId:""})}
+          onClick={() => CleverPush.hasSubscriptionTag({tagId:"HAS_Subscription_Tag_STRING"})}
         >
           Has SubscriptionTag
         </IonButton>
@@ -135,7 +139,7 @@ const Home: React.FC = () => {
 
         <IonButton
           shape='round'
-          onClick={() => CleverPush.setSubscriptionTopics({topics:["",""]})}
+          onClick={() => CleverPush.setSubscriptionTopics({topics:["set_Subscription_Topics_ONE","set_Subscription_Topics_TWO"]})}
         >
           Set SubscriptionTopics
         </IonButton>
@@ -153,8 +157,77 @@ const Home: React.FC = () => {
         >
           Get AvailableTopics
         </IonButton>
-    
 
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.enableDevelopmentMode()}
+        >
+          Enable Development Mode
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.setAuthorizerToken({token:"set_Authorizer_Token"})}
+        >
+          Set Authorizer Token
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.trackEvent({eventName:"TRACK_EVENT_DATA"})}
+        >
+          Track Event
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.getNotifications()}
+        >
+          Get Notifications
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.setSubscriptionAttribute({attributeId:"setSubscriptionAttribute",value:"setSubscriptionAttributeVALUE"})}
+        >
+          Set Subscription Attribute
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.getSubscriptionAttribute({attributeId:"getSubscriptionAttribute"})}
+        >
+          Get Subscription Attribute
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.getSubscriptionAttributes()}
+        >
+          Get Subscription Attributes
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.getAvailableAttributes()}
+        >
+          Get Available Attributes
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.setShowNotificationsInForeground({showNotifications:true})}
+        >
+          Enable Show Notifications In Foreground
+        </IonButton>
+
+        <IonButton
+          shape='round'
+          onClick={() => CleverPush.setShowNotificationsInForeground({showNotifications:false})}
+        >
+          Disable Show Notifications In Foreground
+        </IonButton>
+    
       </IonContent>
     </IonPage>
   );
